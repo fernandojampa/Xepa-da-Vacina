@@ -66,6 +66,7 @@ if __name__ == "__main__":
 
                 except ListaException as e:
                     print(e)
+
                 except ValueError:
                     print(
                         '\n!- Erro na Operação -!\n\nValor inserido não foi um valor válido. Por favor, tente novamente inserindo um número inteiro.')

@@ -1,4 +1,5 @@
 import random
+from vacinas import Vacinas
 
 
 class ListaException(Exception):
@@ -38,9 +39,12 @@ class Agendamento:
         return self._agendamento.pop()
 
     def sorteio(self):
+
         if self.vazio():
-            raise ListaException('Doses esgotadas!')
-        return random.randint(1, self.tamanho())
+            raise ListaException('Não há ninguém na fila!')
+
+        k = random.randint(1, self.tamanho())
+        return f'tamanho sorteado de k: {k}'
 
     def __str__(self):
         return self._agendamento.__str__()
