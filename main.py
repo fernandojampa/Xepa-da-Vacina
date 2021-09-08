@@ -1,9 +1,9 @@
-from vacinas import Vacinas
+#from vacinas import Vacinas
 from ListaPessoas import Agendamento, ListaException
 
 
 lista_atual = Agendamento()
-doses = Vacinas()
+#doses = Vacinas()
 
 if __name__ == "__main__":
     # input do menu
@@ -27,8 +27,18 @@ if __name__ == "__main__":
 
             if opcao == '1':
                 try:
-                    nome = input('Informe seu nome: ')
-                    lista_atual.inserir(nome)
+                    #nome = input('Informe seu nome: ')
+                    # lista_atual.inserir(nome)
+
+                    lista_atual.inserir('Fernando')
+                    lista_atual.inserir('Maria')
+                    lista_atual.inserir('Andre')
+                    lista_atual.inserir('Candido')
+                    lista_atual.inserir('Alex')
+                    lista_atual.inserir('Edemberg')
+                    lista_atual.inserir('Jorge')
+                    lista_atual.inserir('Leonidas')
+
                     #print ("Valor inserido no início da lista.")
                 except ValueError:
                     print(
@@ -40,7 +50,7 @@ if __name__ == "__main__":
                 try:
                     valor = int(
                         input('Informe quantidade de doses remanescentes: '))
-                    doses.atualizarDoses(valor)
+                    lista_atual.atualizarDoses(valor)
 
                 except ValueError:
                     print(
@@ -49,9 +59,10 @@ if __name__ == "__main__":
             # Opção de buscar um valor na lista, com a chamada do respectivo método: busca.
 
             elif opcao == '3':
+                k = int(input('Informe o valor de k: '))
                 print('Iniciando sorteio...')
                 try:
-                    print(lista_atual.sorteio())
+                    print(lista_atual.sorteio(k))
 
                 except ListaException as e:
                     print(e)
@@ -74,7 +85,7 @@ if __name__ == "__main__":
             elif opcao == '5':
                 print('Consultar doses remanescentes')
                 try:
-                    print(doses.tamanho())
+                    print(lista_atual.dosesQuantidade())
 
                 except ListaException as e:
                     print(e)

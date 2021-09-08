@@ -13,7 +13,7 @@ class Vacinas:
     def vazio(self):
         return self._quantidade == 0  # returna True ou False
 
-    def tamanho(self):
+    def doses(self):
         return self._quantidade
 
     def atualizarDoses(self, estoque):
