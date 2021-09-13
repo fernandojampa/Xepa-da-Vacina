@@ -38,6 +38,8 @@ repetidamente até que a quantidade q de vacinas seja atingida.
 
 ##
 
+<img src="https://media.discordapp.net/attachments/837105403720106047/886806431834198026/pointer.png">
+
 Vamos considerar um k=4 e q=5. De acordo com a ilustração acima, o processo inicia com a
 definição de Luiz como pointer. Avançando k pessoas adiante, no sentido horário, o primeiro
 a sair é Alex. Este é removido para tomar a vacina e o pointer é avançado para o elemento
